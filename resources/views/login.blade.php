@@ -2,6 +2,8 @@
 
 
 @section('content')
+
+
 <div class="px-2">
     <div class="container col-lg-6 col-sm-8 col-xs-2 col-md-12  my-5  p-3 card">
         <div class="row">
@@ -14,10 +16,13 @@
                     <div class="form-outline mb-4">
                         <label class="form-label" for="form2Example1">Email address</label>
                         <input type="email" id="form2Example1"   value='{{ old('email')}}' name="email" class="form-control @error('email') border-danger @enderror" />
-                        @error('email')
-                            <span class="text-danger">{{$message}}</span>                        
-                        @enderror
+                        {{-- @error('email')
+                        @enderror --}}
+                        @if (session('error'))
+                            <span class="text-danger">{{ session('error') }}</span>                        
+                        @endif
                     </div>
+
 
                     <!-- Password input -->
                     <div class="form-outline mb-4">
@@ -29,7 +34,7 @@
                     </div>
 
                     <!-- Submit button -->
-                    <button type="submit" class="btn btn-primary btn-block mb-4"  >Register</button>
+                    <button type="submit" class="btn btn-primary btn-block mb-4"  >Login</button>
 
                     <!-- Register buttons -->
                     <div class="text-center">

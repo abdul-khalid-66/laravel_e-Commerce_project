@@ -25,13 +25,13 @@ class User_Seeder extends Seeder
         'password' => Hash::make('123'),
         ],
         [
-        'name' => "khalid",
-        'email' => "khan@gmail.com",
+        'name' => "khalid1",
+        'email' => "khankhan1@gmail.com",
         'password' => Hash::make('123'),
         ],
         [
         'name' => "ameen",
-        'email' => "ameen@gmail.com",
+        'email' => "ameenkhan1@gmail.com",
         'password' => Hash::make('123'),
         ],
         );
